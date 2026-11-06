@@ -62,3 +62,25 @@ nav{gap:16px;font-size:12px}nav span{font-size:9.6px}
 
 /* Review: quieter navigation and image-first project cards. */
 nav{flex-direction:row;gap:30px;font-size:16px}nav a{display:block;font-weight:500}.experiment-card h2{margin-top:22px}.experiment-visual img{object-fit:cover}.visual-captain-ham{background:#e5e5e2}.visual-captain-ham img{object-fit:contain;padding:28px}.visual-future-radio img,.visual-pixcloud img{object-fit:contain}.visual-pixcloud{background:#fff}.concept-note{position:absolute;left:12px;bottom:12px;background:#080808b8;color:#fff;font-size:10px;padding:5px 8px;font-weight:400}.course-collage{display:grid;grid-template-columns:5fr 7fr;width:100%;height:100%;gap:0;background:#23674e;overflow:hidden}.experiment-visual .course-collage img{height:100%;width:100%;object-fit:cover}.experiment-visual .course-collage img:first-child{object-fit:contain}.experiment-visual .course-collage img:last-child{object-position:42% center}.work-heading h2{margin-top:0}.footer-bottom>a{font-size:28px;color:white;min-width:44px;text-align:center}@media(max-width:600px){nav{gap:16px;font-size:13px}header{gap:14px}header .wordmark{width:100px}.experiment-card h2{margin-top:18px}.visual-captain-ham img{padding:20px}}
+
+/* A quiet chronological rail, outside the project imagery. */
+.experiment-showcase{position:relative;padding-left:max(88px,8%)}
+.experiment-timeline{position:relative}
+.experiment-timeline::before{content:"";position:absolute;left:-28px;top:0;bottom:0;width:1px;background:#d1d1cb}
+.timeline-group{position:relative;padding-bottom:64px}
+.timeline-group:last-child{padding-bottom:0}
+.timeline-year{position:absolute;right:calc(100% + 40px);top:0;margin:0;font-family:Arial,sans-serif;font-size:11px;font-weight:400;line-height:1;letter-spacing:.03em;color:#777770;white-space:nowrap}
+.timeline-year::after{content:"";position:absolute;top:5px;left:calc(100% + 7px);width:10px;height:1px;background:#aaa9a1}
+.visual-ai-camp>img{object-position:center 48%}
+.visual-pixcloud>img{object-fit:cover}
+@media(max-width:600px){
+.experiment-showcase{padding-left:64px;padding-right:5%}
+.experiment-timeline::before{left:-17px}
+.timeline-year{right:calc(100% + 26px);font-size:10px}
+.timeline-year::after{left:calc(100% + 4px);width:8px}
+.timeline-group{padding-bottom:42px}
+.experiment-card h2{font-size:clamp(23px,6vw,29px)}
+}
+
+/* Reserve enough rail space for the Ongoing label on narrow screens. */
+@media(max-width:600px){.experiment-showcase{padding-left:76px}}
